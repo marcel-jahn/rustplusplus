@@ -9,4 +9,6 @@ COPY package-lock.json /app/package-lock.json
 RUN npm install
 COPY . /app
 
+RUN mkdir -p /app/instances /app/logs /app/maps
+
 CMD ["npm", "start"]
